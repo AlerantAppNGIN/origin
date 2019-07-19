@@ -5,7 +5,7 @@
 #
 FROM openshift/origin-cli
 
-RUN INSTALL_PKGS="haproxy18 rsyslog" && \
+RUN INSTALL_PKGS="haproxy18 rsyslog rsync" && \
     yum install -y $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all && \
